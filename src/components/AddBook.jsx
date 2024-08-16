@@ -17,8 +17,14 @@ function AddBook(props) {
       description: description,
     };
     axios
-      .post("https://long-nguyen-300356398-final-backend.vercel.app/api/v1/book", newBook)
-      .then(navigate("/"))
+      .post(
+        "https://long-nguyen-300356398-final-backend.vercel.app/api/v1/book",
+        newBook
+      )
+      .then(() => {
+        alert("New Book Added!");
+        navigate("/");
+      })
       .catch((error) => {
         console.log(error);
       });

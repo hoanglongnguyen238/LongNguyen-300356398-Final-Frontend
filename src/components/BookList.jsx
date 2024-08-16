@@ -20,7 +20,7 @@ function BookList() {
   }, [dataUpdate]);
 
   const handleDataUpdate = () => {
-    alert("Book Deleted");
+    alert("Book Deleted!");
     SetDataUpdate({
       dataUpdate: !dataUpdate,
     });
